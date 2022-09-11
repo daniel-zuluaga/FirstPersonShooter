@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Stats")]
+    public int curHp;
+    public int maxHp;
+
     [Header("Movement")]
     public float moveSpeed;
     public float jumpForce;
@@ -73,6 +77,19 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, 1.1f))
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse );
+    }
+
+    public void TakeDamage(int damage)
+    {
+        curHp -= damage;
+
+        if (curHp <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+
     }
 
 }

@@ -17,17 +17,18 @@ public class Weapon : MonoBehaviour
     private float lastShootTime;
     private bool isPlayer;
 
-    private void Awake()
+    void Awake()
     {
-        // are we attached to the player
+        // are we attached to the player?
         if (GetComponent<PlayerController>())
             isPlayer = true;
 
     }
 
+    // can we shoot a bullet?
     public bool CanShoot()
     {
-        if(Time.time - lastShootTime >= shootRate)
+        if (Time.time - lastShootTime >= shootRate)
         {
             if (curAmmo > 0 || infiniteAmmo == true)
                 return true;
@@ -36,6 +37,7 @@ public class Weapon : MonoBehaviour
         return false;
     }
 
+    // called when we want to shoot a bullet
     public void Shoot()
     {
         lastShootTime = Time.time;
@@ -47,8 +49,7 @@ public class Weapon : MonoBehaviour
         bullet.transform.rotation = muzzle.rotation;
 
         // set the velocity
-        bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed; 
-
+        bullet.GetComponent<Rigidbody>().velocity = muzzle.forward * bulletSpeed;
     }
 
 

@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 197444198}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 3939325083617218992, guid: 422dc5d0d363e4665874cbc051b9dc0d, type: 3}
-  createOnStart: 0
+  createOnStart: 5
 --- !u!114 &197444199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   curAmmo: 0
   maxAmmo: 0
   infiniteAmmo: 1
-  bulletSpeed: 20
+  bulletSpeed: 15
   shootRate: 1
 --- !u!114 &197444200
 MonoBehaviour:
@@ -885,7 +885,7 @@ GameObject:
   - component: {fileID: 1442894152}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -997,6 +997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9dd3cf0d2f640cf91c54356b62463f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curHp: 50
+  maxHp: 50
   moveSpeed: 6
   jumpForce: 8
   lookSensibility: 5
@@ -1017,8 +1019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1442894155}
   muzzle: {fileID: 1109789725}
-  curAmmo: 60
-  maxAmmo: 60
+  curAmmo: 5
+  maxAmmo: 5
   infiniteAmmo: 0
   bulletSpeed: 20
   shootRate: 1.5
@@ -1035,7 +1037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 3939325083617218992, guid: 422dc5d0d363e4665874cbc051b9dc0d, type: 3}
-  createOnStart: 3
+  createOnStart: 5
 --- !u!1 &1462184220
 GameObject:
   m_ObjectHideFlags: 0
