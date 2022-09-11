@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-
     public GameObject objPrefab;
     public int createOnStart;
 
@@ -23,6 +22,7 @@ public class ObjectPool : MonoBehaviour
         GameObject obj = Instantiate(objPrefab);
         obj.SetActive(false);
         pooledObjs.Add(obj);
+
         return obj;
     }
 
@@ -39,5 +39,4 @@ public class ObjectPool : MonoBehaviour
 
         return obj;
     }
-
 }
