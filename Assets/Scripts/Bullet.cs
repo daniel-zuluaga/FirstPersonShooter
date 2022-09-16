@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - shootTime >= lifetime)
+        if (Time.time - shootTime <= lifetime)
             gameObject.SetActive(false);
     }
 
