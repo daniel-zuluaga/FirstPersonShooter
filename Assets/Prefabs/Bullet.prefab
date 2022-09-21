@@ -47,8 +47,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1fab8e3e0d84657bddae6180d61cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  lifeTime: 10
+  damage: 2
+  lifetime: 5
+  bloodParticle: {fileID: 3662856491024964251, guid: 694c8b682bfcf432a8dfda0095134007, type: 3}
+  hitParticle: {fileID: 458086810000145251, guid: 3ff78d4462cd94bfeac85412dbd5c0e3, type: 3}
+  enemy: {fileID: 3939325083617218997}
 --- !u!33 &3939325083617218996
 MeshFilter:
   m_ObjectHideFlags: 0

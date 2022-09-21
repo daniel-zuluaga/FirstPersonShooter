@@ -8,6 +8,11 @@ public class Bullet : MonoBehaviour
     public float lifetime;
     private float shootTime;
 
+    public GameObject bloodParticle;
+    public GameObject hitParticle;
+
+    public Transform enemy;
+
     private void OnEnable()
     {
         shootTime = Time.time;
@@ -16,7 +21,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time - shootTime <= lifetime)
+        if (Time.time - shootTime >= lifetime)
             gameObject.SetActive(false);
     }
 
@@ -24,9 +29,20 @@ public class Bullet : MonoBehaviour
     {
         // did we hit the player?
         if (other.CompareTag("Player"))
+        {
             other.GetComponent<PlayerController>().TakeDamage(damage);
+        }
         else if (other.CompareTag("Enemy"))
+        {
+            GameObject bloodObj = Instantiate(bloodParticle, enemy.position, Quaternion.identity);
             other.GetComponent<Enemy>().TakeDamage(damage);
+        }
+        // create the hit particle
+        else if (other.CompareTag("Obstacle"))
+        {
+            GameObject hitObj = Instantiate(hitParticle, transform.position, Quaternion.identity);
+            Destroy(hitObj, 1);
+        }
         // disable the bullet
         gameObject.SetActive(false);
     }
