@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 228676881}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 887053147}
   m_Layer: 0
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 1053151507}
   m_Layer: 0
   m_Name: _Map
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 1111149120}
   m_Layer: 0
   m_Name: Rock (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1019,8 +1019,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPool: {fileID: 1442894155}
   muzzle: {fileID: 1109789725}
-  curAmmo: 5
-  maxAmmo: 5
+  curAmmo: 100
+  maxAmmo: 100
   infiniteAmmo: 0
   bulletSpeed: 20
   shootRate: 1.5
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 1462184222}
   m_Layer: 0
   m_Name: Rock (4)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1148,7 +1148,7 @@ GameObject:
   - component: {fileID: 1470590282}
   m_Layer: 0
   m_Name: Rock (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -1525,7 +1525,7 @@ GameObject:
   - component: {fileID: 1944629905}
   m_Layer: 0
   m_Name: Rock (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
