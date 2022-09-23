@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
     private Weapon weapon;
     private GameObject target;
 
+    public GameObject ParticleBlood;
+
+
     void Start()
     {
         weapon = GetComponent<Weapon>();
@@ -91,6 +94,8 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        GameObject bloodObj = Instantiate(ParticleBlood, transform.position, transform.rotation);
+        Destroy(bloodObj, 1.2f);
     }
 
 }
