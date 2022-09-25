@@ -93,6 +93,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        GameManager.instance.AddScore(scoreToGive);
         Destroy(gameObject);
         GameObject bloodObj = Instantiate(ParticleBlood, transform.position, transform.rotation);
         Destroy(bloodObj, 1.2f);

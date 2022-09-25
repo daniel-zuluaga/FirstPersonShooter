@@ -50,7 +50,6 @@ public class GameUI : MonoBehaviour
     public void TogglePauseMenu (bool paused)
     {
         pauseMenu.SetActive(paused);
-        pauseButton.SetActive(true);
     }
 
     public void SetEndGameScreen (bool won, int score)
@@ -63,13 +62,15 @@ public class GameUI : MonoBehaviour
 
     public void OnContinueButton()
     {
-
+        GameManager.instance.TogglePauseGame();
+        pauseButton.SetActive(true);
     }
 
     public void OnPauseButton()
     {
-        TogglePauseMenu(true);
+        Time.timeScale = 0f;
         pauseButton.SetActive(false);
+        GameManager.instance.TogglePauseGame();
     }
 
     public void OnRestartButton()
