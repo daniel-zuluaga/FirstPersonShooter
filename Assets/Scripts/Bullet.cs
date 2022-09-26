@@ -34,14 +34,11 @@ public class Bullet : MonoBehaviour
         else if (other.CompareTag("Enemy"))
         {
             other.GetComponent<Enemy>().TakeDamage(damage);
-            GameObject hitObj = Instantiate(hitParticle, transform.position, Quaternion.identity);
-            Destroy(hitObj, 1);
+
         }
-        else if (other.CompareTag("Others"))
-        {
-            GameObject hitObj = Instantiate(hitParticle, transform.position, Quaternion.identity);
-            Destroy(hitObj, 1);
-        }
+
+        GameObject hitObj = Instantiate(hitParticle, transform.position, Quaternion.identity);
+        Destroy(hitObj, 1);
 
         // disable the bullet
         gameObject.SetActive(false);
