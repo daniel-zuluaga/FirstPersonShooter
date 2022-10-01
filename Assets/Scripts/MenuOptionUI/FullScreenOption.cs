@@ -20,14 +20,8 @@ public class FullScreenOption : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActivateFullScreen(bool boolFullScreen)
     {
-        
-    }
-
-    public void ActivateFullScreen(bool FullScreen)
-    {
-        Screen.fullScreen = FullScreen;
+        Screen.fullScreen = boolFullScreen;
     }
 }
